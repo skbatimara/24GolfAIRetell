@@ -70,7 +70,7 @@ class TwilioClient:
 			call = self.client.calls(sid).update(
 				twiml="<Response><Hangup></Hangup></Response>",
 			)
-			print(f"Ended call: ", vars(call))
+			print("Ended call: ", vars(call))
 		except Exception as err:
 			print(err)
 
@@ -80,7 +80,7 @@ class TwilioClient:
 			call = self.client.calls(sid).update(
 				twiml=f"<Response><Dial>{to_number}</Dial></Response>",
 			)
-			print(f"Transferred call: ", vars(call))
+			print("Transferred call: ", vars(call))
 		except Exception as err:
 			print(err)
 
